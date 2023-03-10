@@ -15,7 +15,7 @@ opts.Add(PathVariable("target_path",
 opts.Add(PathVariable("target_name", "The library name.",
          "libgit_plugin", PathVariable.PathAccept))
 opts.Add(PathVariable("macos_openssl", "Path to OpenSSL library root - only used in macOS builds.",
-                      "/usr/local/opt/openssl@1.1/", PathVariable.PathAccept))  # TODO: Find a way to configure this to use the cloned OpenSSL source code, based on `macos_arch`.
+                      "/opt/homebrew/include/openssl", PathVariable.PathAccept))  # TODO: Find a way to configure this to use the cloned OpenSSL source code, based on `macos_arch`.
 opts.Add(PathVariable("macos_openssl_static_ssl", "Path to OpenSSL libssl.a library - only used in macOS builds.",
          os.path.join(os.path.abspath(os.getcwd()), "thirdparty/openssl/libssl.a"), PathVariable.PathAccept))
 opts.Add(PathVariable("macos_openssl_static_crypto", "Path to OpenSSL libcrypto.a library - only used in macOS builds.",
